@@ -4,6 +4,8 @@ GEM
     byebug (11.1.3)
     combine_pdf (1.0.21)
       ruby-rc4 (>= 0.1.5)
+    daemons (1.3.1)
+    eventmachine (1.2.7)
     ffi (1.14.2)
     listen (3.4.1)
       rb-fsevent (~> 0.10, >= 0.10.3)
@@ -25,6 +27,10 @@ GEM
       rack (~> 2.2)
       rack-protection (= 2.1.0)
       tilt (~> 2.0)
+    thin (1.8.0)
+      daemons (~> 1.0, >= 1.0.9)
+      eventmachine (~> 1.0, >= 1.0.4)
+      rack (>= 1, < 3)
     tilt (2.0.10)
 
 PLATFORMS
@@ -35,6 +41,7 @@ DEPENDENCIES
   combine_pdf
   rerun
   sinatra
+  thin
 
 BUNDLED WITH
    2.2.7

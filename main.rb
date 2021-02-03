@@ -3,10 +3,15 @@ require 'sinatra'
 require 'byebug'
 require 'combine_pdf'
 
+# Running on thin for multithreading
+set :server, :thin
+
+# Rendering the very simple form page
 get '/' do
   erb :index
 end
 
+# Combining the given PDF files
 post '/deckblattdazwischen' do
   param_exam = params.fetch "exam"
   param_cover = params.fetch "coversheet"
