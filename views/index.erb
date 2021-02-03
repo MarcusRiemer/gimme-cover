@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+      form {
+          display: flex;
+          flex-direction: column;
+      }
+
+      form > * {
+          margin-bottom: 1rem;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Gib mir Klausuren mit Deckblättern</h1>
+    <form
+      action="/deckblattdazwischen"
+      method="post"
+      enctype="multipart/form-data"
+      >
+      <label>
+        Hier bitte die Klausur <input type="file" name="exam" required>
+      </label>
+      <label>
+        Hier bitte die Deckblätter <input type="file" name="coversheet" required>
+      </label>
+      <button>Gib mir!</button>
+    </form>
+  </body>
+</html>
